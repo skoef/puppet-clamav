@@ -1,0 +1,7 @@
+# File managed by Puppet
+
+<% if @options.is_a? Hash -%>
+<%  @options.sort_by {|k, v| k}.each do |key, value| -%>
+<%=  key %> <%= [value].flatten.join(', ') %>
+<%  end -%>
+<% end -%>
